@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './App.css'
-import MovieContainer from './components/MovieContainer';
+
 
 const App = () => {
 
-const [first, setfirst] = useState()
-const[inp,getInp]=useState();
-const[movie,movieDetails]=useState()
+const [first, setfirst] = useState("")
+const[inp,getInp]=useState("");
+const[movie,movieDetails]=useState("")
 
 useEffect(() => {
   async function getData(){
@@ -43,11 +43,11 @@ useEffect(() => {
         <p style={{textAlign:"center",fontSize:"1.3rem",marginTop:"25px"}}>Sharing a few of our favourite movies</p>
 
         <div className='movieContainer'>
-        <div className='title'>
-        <p className='movieTitle'>{movie.Title}</p>
-        <img src={movie.Poster} alt='image' className='image'/>
-        <p className='movieYear'>{movie.Year}</p>
-    </div>
+           <div className='title'>
+              <p className='movieTitle'>{movie.Title}</p>
+               <img src={movie.Poster} alt='image1' className='image'/>
+               <p className='movieYear'>{movie.Year}</p>
+            </div>
         </div>
 
      
